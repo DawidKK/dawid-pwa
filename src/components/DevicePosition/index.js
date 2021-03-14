@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useMotion } from 'react-use'
 
 const DevicePosition = props => {
