@@ -1,40 +1,34 @@
-import React from 'react'
-import { useMotion } from 'react-use'
+import React, { useState, useEffect } from 'react'
 
 const DevicePosition = props => {
-  const state = useMotion();
+  const [isAccessGranted, setIsAccessGranted] = useState(false)
+  const [[a, b, g], setRotation] = useState([0, 0, 0])
 
-  // useEffect(() => {
-  //   if ( window.location.protocol != "https:" ) {
-  //     window.location.href = "https:" + window.location.href.substring( window.location.protocol.length );
-  //   }
-  // }, [])
+  const requestDeviceMotionEventPermission = async () => {
+    const response = await window.DeviceMotionEvent.requestPermission()
+    if (response === 'granted') {
+      setIsAccessGranted(true)
+    }
+  }
 
-  // const onClick = () => {
-  //     if ( typeof( DeviceMotionEvent ) !== "undefined" && typeof( DeviceMotionEvent.requestPermission ) === "function" ) {
-  //         // (optional) Do something before API request prompt.
-  //         DeviceMotionEvent.requestPermission()
-  //             .then( response => {
-  //             // (optional) Do something after API prompt dismissed.
-  //             if ( response == "granted" ) {
-  //                 window.addEventListener( "devicemotion", (e) => {
-  //                     // do something for 'e' here.
-  //                 })
-  //             }
-  //         })
-  //             .catch( console.error )
-  //     } else {
-  //         alert( "DeviceMotionEvent is not defined" );
-  //     }
-  // }
+  useEffect(() => {
+    const callback = e => {
+      const { alpha, beta, gamma } = e
+      setRotation([alpha || 0, beta || 0, gamma || 0])
+    }
+
+    window.addEventListener('deviceorientation', callback, true)
+    return () => {
+      window.removeEventListener('deviceorientation', callback, true)
+    }
+  }, [isAccessGranted])
 
   return (
     <>
-      <pre>
-        {JSON.stringify(state, null, 2)}
-        dsdsds
-      </pre>
-      {/* <button onClick={onClick}>click</button> */}
+      <p>Alpha: {a.toFixed(2)}</p>
+      <p>Beta: {b.toFixed(2)}</p>
+      <p>Gamma: {g.toFixed(2)}</p>
+      <button onClick={requestDeviceMotionEventPermission}>click</button>
     </>
   );
 }
