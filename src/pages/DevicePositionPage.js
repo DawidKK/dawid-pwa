@@ -1,11 +1,10 @@
 import React from 'react'
+import DevicePosition from '../components/DevicePosition'
 
-const DevicePosition = () => {
+const DevicePositionPage = () => {
   return (
-    <div>
-      Device position
-    </div>
+    <DevicePosition />
   )
 }
 
-export default DevicePosition
+export default DevicePositionPage

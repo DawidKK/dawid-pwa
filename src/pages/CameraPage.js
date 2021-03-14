@@ -1,11 +1,10 @@
 import React from 'react'
+import Camera from '../components/Camera'
 
-const Camera = () => {
+const CameraPage = () => {
   return (
-    <div>
-      Camera
-    </div>
+    <Camera />
   )
 }
 
-export default Camera
+export default CameraPage
