@@ -1,11 +1,10 @@
 import React from 'react'
+import Reachability from '../components/Reachability'
 
-export const Reachability = () => {
+const ReachabilityPage = () => {
   return (
-    <div>
-      Reachability
-    </div>
+    <Reachability />
   )
 }
 
-export default Reachability
+export default ReachabilityPage

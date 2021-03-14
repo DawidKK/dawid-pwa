@@ -1,9 +1,8 @@
 import React from 'react'
-import Offline from '../components/Offline'
 
 const OfflinePage = () => {
   return (
-    <Offline />
+    <p>elo</p>
   )
 }
 
