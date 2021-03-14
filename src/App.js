@@ -6,11 +6,11 @@ import {
 } from "react-router-dom";
 
 import Navigation from './components/Navigation'
-import Geolocation from './pages/Geolocation'
-import Offline from './pages/Offline'
-import Camera from './pages/Camera'
-import Reachability from './pages/Reachability'
-import DevicePosition from './pages/DevicePosition'
+import GeolocationPage from './pages/GeolocationPage'
+import OfflinePage from './pages/OfflinePage'
+import CameraPage from './pages/CameraPage'
+import ReachabilityPage from './pages/ReachabilityPage'
+import DevicePositionPage from './pages/DevicePositionPage'
 
 function App() {
   return (
@@ -19,19 +19,19 @@ function App() {
         <Navigation />
         <Switch>
           <Route path="/geolocation">
-            <Geolocation />
+            <GeolocationPage />
           </Route>
           <Route path="/offline">
-            <Offline />
+            <OfflinePage />
           </Route>
           <Route path="/camera">
-            <Camera />
+            <CameraPage />
           </Route>
           <Route path="/reachability">
-            <Reachability />
+            <ReachabilityPage />
           </Route>
           <Route path="/device-position">
-            <DevicePosition />
+            <DevicePositionPage />
           </Route>
           <Route exact path="/">
             <p>elo witam</p>
