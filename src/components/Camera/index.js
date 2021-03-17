@@ -16,7 +16,7 @@ const Camera = props => {
   const handleClick = () => {
     navigator.mediaDevices.getUserMedia({
       video: true
-     })
+    })
   }
 
   return (
