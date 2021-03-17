@@ -27,5 +27,5 @@
   "start_url": "https://dawid-pwa.netlify.app/",
   "display": "standalone",
   "theme_color": "#42ff68",
-  "background_color": "#ff000"
+  "background_color": "#ff0000"
 }
