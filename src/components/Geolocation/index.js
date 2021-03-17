@@ -53,9 +53,11 @@ const Geolocation = () => {
           zoom={13}
           center={currentPosition}
         >
-          <Marker
-            position={poi}
-          />
+          {poi.map(singlePoi => (
+            <Marker
+              position={singlePoi}
+            />
+          ))}
         </GoogleMap>
       </LoadScript>
     </>
