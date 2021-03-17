@@ -1,11 +1,10 @@
 import React from 'react'
+import Geolocation from '../components/Geolocation'
 
-const Geolocation = () => {
+const GeolocationPage = () => {
   return (
-    <div>
-      Geolocation
-    </div>
+    <Geolocation />
   )
 }
 
-export default Geolocation
+export default GeolocationPage
