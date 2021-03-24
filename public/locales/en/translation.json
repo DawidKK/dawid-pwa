@@ -9,5 +9,6 @@
     "computer": "I have {{count}} computer",
     "computer_plural": "I have {{count}} computers"
   },
-  "boldText": "Check <1>application</1> out mate."
+  "boldText": "Check <1>application</1> out mate.",
+  "onlyEnglish": "Only english text"
 }

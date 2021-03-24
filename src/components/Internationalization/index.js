@@ -24,7 +24,15 @@ const Internationalization = props => {
         en
       </button>
       <h1>{t('title')}</h1>
-      <Trans i18nKey="boldText">See the <strong>description</strong> below.</Trans>
+      <br></br>
+      <br></br>
+      <br></br>
+      <p>Default value: {t('nieMaTego', 'not found 404')}</p>
+      <p>Fallback value: {t('onlyEnglish')}</p>
+      <p>Bold text: <Trans i18nKey="boldText">See the <strong>description</strong> below.</Trans></p>
+      <br></br>
+      <br></br>
+      <br></br>
       {numbers.map(number => {
         return (
           <>
