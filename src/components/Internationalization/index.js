@@ -15,8 +15,14 @@ const Internationalization = props => {
 
   const numbers = Array.from({length: 33}, (_, i) => i + 1)
 
+  const date = new Date()
+  const count = 123.2222
+  const renderLocaleDate = locale => `${new Intl.DateTimeFormat(locale).format(date)} ${new Intl.NumberFormat(locale).format(count)}`
+
   return (
     <div>
+      <p>USA: {renderLocaleDate('en-US')}</p>
+      <p>PL: {renderLocaleDate('pl-PL')}</p>
       <button type="button" onClick={() => handleSwitchLang('pl')}>
         pl
       </button>
