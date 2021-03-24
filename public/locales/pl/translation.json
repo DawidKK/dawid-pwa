@@ -1,0 +1,14 @@
+{
+  "title": "Witaj mordo xD",
+  "description": {
+    "part1": "Aby zacząc edytuj ",
+    "part2": "przełącz język ziom"
+  },
+  "computer_interval": "(1){{count}} [komputer];(2-4){{count}} [komputery];(5-inf) {{count}} [komputerów];",
+  "computers": {
+    "computer_0": "mam {{count}} komputer",
+    "computer_1": "mam {{count}} komputery",
+    "computer_2": "mam {{count}} komputerów"
+  },
+  "boldText": "Obczaj <1>aplikację</1> ziom."
+}
