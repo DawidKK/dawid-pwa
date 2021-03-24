@@ -12,6 +12,7 @@ import OfflinePage from './pages/OfflinePage'
 import CameraPage from './pages/CameraPage'
 import ReachabilityPage from './pages/ReachabilityPage'
 import DevicePositionPage from './pages/DevicePositionPage'
+import InternationalizationPage from './pages/InternationalizationPage'
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
           </Route>
           <Route exact path="/">
             <p>elo witam</p>
+          </Route>
+          <Route exact path="/internationalization">
+            <InternationalizationPage />
           </Route>
         </Switch>
       </Router>

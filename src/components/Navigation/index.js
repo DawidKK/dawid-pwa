@@ -11,6 +11,7 @@ const Navigation = () => {
       <Link to="/camera">Camera</Link>
       <Link to="/reachability">Reachability</Link>
       <Link to="/device-position">Device Position</Link>
+      <Link to="/internationalization">Internationalization</Link>
     </Navbar>
   )
 }
