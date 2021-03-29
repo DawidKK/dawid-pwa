@@ -36,7 +36,7 @@ function Application() {
             <DevicePositionPage />
           </Route>
           <Route exact path="/">
-            <p>elo witam</p>
+            <p>elo witam mordo</p>
           </Route>
           <Route exact path="/internationalization">
             <InternationalizationPage />
