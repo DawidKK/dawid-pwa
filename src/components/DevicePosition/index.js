@@ -12,6 +12,7 @@ const DevicePosition = props => {
   }
 
   useEffect(() => {
+
     const callback = e => {
       const { alpha, beta, gamma } = e
       setRotation([alpha || 0, beta || 0, gamma || 0])
